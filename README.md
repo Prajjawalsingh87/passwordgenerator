@@ -50,13 +50,7 @@ npm install
 npm run dev
 
 
-
-
-src/
-  ├── App.jsx
-  ├── main.jsx
-  └── index.css
-#LINK 
+## LINK (Vercel Deployment)
 https://passwordgenerator-three-steel.vercel.app/
 
 
