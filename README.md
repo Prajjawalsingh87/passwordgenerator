@@ -1,56 +1,31 @@
-# 🔐 Password Generator (React + Vite)
+# 🔐 Password Generator
 
-A modern and responsive password generator web application built using **React** and **Vite**.  
-It allows users to generate secure random passwords with customizable length, numbers, and special characters.
+Generate strong, random passwords in one click. Built with React, Vite and Tailwind CSS.
 
----
+**🔗 Live:** https://passwordgenerator-three-steel.vercel.app
 
-## 🚀 Features
+## ✨ Features
 
-- 🎯 Generate strong random passwords
-- 📏 Adjustable password length using slider
-- 🔢 Option to include numbers
-- 🔣 Option to include special characters
-- 📋 One-click copy to clipboard
-- 📐 Auto-resizing password input field
-- ⚡ Fast performance with Vite
-- 📱 Responsive and modern UI (Tailwind CSS)
-
----
+- **Cryptographically secure** randomness (`crypto.getRandomValues`), not `Math.random`
+- Length from **8 to 64** characters with a slider
+- Choose **uppercase, lowercase, numbers and symbols**; at least one character of each chosen type is always included
+- **Strength meter**: Weak / Fair / Good / Strong
+- **One-click copy** with "Copied to clipboard" feedback, and a regenerate button
+- Long passwords wrap instead of overflowing on phones
 
 ## 🛠 Tech Stack
 
-- React (Hooks)
-- Vite
-- JavaScript (ES6+)
-- Tailwind CSS
+React 18 · Vite · Tailwind CSS
 
----
+## ▶️ Run locally
 
-## 📸 Preview
-
-> Add a screenshot here if you want:
-
-
----
-
-## ⚙️ Installation & Setup
-
-
-# Clone the repository
-git clone https://github.com/your-username/password-generator.git
-
-# Navigate to project folder
-cd password-generator
-
-# Install dependencies
+```bash
+git clone https://github.com/Prajjawalsingh87/passwordgenerator.git
+cd passwordgenerator
 npm install
+npm run dev        # http://localhost:5173
+```
 
-# Start development server
-npm run dev
+## 🚀 Deployment
 
-
-## LINK (Vercel Deployment)
-https://passwordgenerator-three-steel.vercel.app/
-
-
+Deployed on **Vercel**; every push to `main` deploys to production.
