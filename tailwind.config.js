@@ -12,10 +12,10 @@ export default {
       },
       colors: {
         surface: {
-          DEFAULT: '#0b1120',
-          raised: '#111a2e',
-          sunken: '#0a0f1c',
-          border: '#1f2a44',
+          DEFAULT: '#f6f7fb',
+          raised: '#ffffff',
+          sunken: '#f1f5f9',
+          border: '#e2e8f0',
         },
       },
     },
