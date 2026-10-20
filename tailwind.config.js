@@ -1,5 +1,8 @@
+import themePreset from './tailwind.theme.js'
+
 /** @type {import('tailwindcss').Config} */
 export default {
+  presets: [themePreset],
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -11,11 +14,12 @@ export default {
         mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       colors: {
+        // Surfaces follow the theme (see src/theme.css).
         surface: {
-          DEFAULT: '#f6f7fb',
-          raised: '#ffffff',
-          sunken: '#f1f5f9',
-          border: '#e2e8f0',
+          DEFAULT: 'rgb(var(--surface-page) / <alpha-value>)',
+          raised: 'rgb(var(--surface) / <alpha-value>)',
+          sunken: 'rgb(var(--surface-sunken) / <alpha-value>)',
+          border: 'rgb(var(--surface-border) / <alpha-value>)',
         },
       },
     },
