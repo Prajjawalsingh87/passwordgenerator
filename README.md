@@ -12,6 +12,9 @@ Generate strong, random passwords in one click. Built with React, Vite and Tailw
 - **Strength meter**: Weak / Fair / Good / Strong
 - **One-click copy** with "Copied to clipboard" feedback, and a regenerate button
 - Long passwords wrap instead of overflowing on phones
+- **Passphrase mode**: random words from a built-in list of 604 common words, with word count (3–10), separator (hyphen, space, dot, underscore or none), and options to capitalize words and add a number
+- **Entropy in bits** for both passwords and passphrases, which drives the strength meter
+- **Recent list**: the last 5 results from this session with copy buttons and a Clear button (kept in memory only, never saved)
 
 ## 🛠 Tech Stack
 
