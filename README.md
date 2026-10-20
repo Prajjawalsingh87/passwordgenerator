@@ -29,3 +29,29 @@ npm run dev        # http://localhost:5173
 ## 🚀 Deployment
 
 Deployed on **Vercel**; every push to `main` deploys to production.
+
+
+## October 2026 improvements
+
+Optionally exclude look-alike characters (`I`, `l`, `1`, `O`, `0`, `o`). Every enabled character group is still represented. Clipboard failures explain how to copy manually. Passwords stay in memory and are not saved to browser storage.
+
+
+## Terminal verification and deployment
+
+```bash
+npm ci
+npm run lint
+npm run build
+npm run dev
+```
+
+Node.js 24 is used on Vercel. The production build is written to `dist/`.
+
+```bash
+vercel link --project passwordgenerator
+vercel deploy          # preview
+vercel deploy --prod   # publish production
+```
+
+The local `.vercel/` link is ignored by Git. Deployment credentials belong in
+the CLI's login session, never in this repository.
