@@ -15,10 +15,12 @@ Generate strong, random passwords in one click. Built with React, Vite and Tailw
 - **Passphrase mode**: random words from a built-in list of 604 common words, with word count (3–10), separator (hyphen, space, dot, underscore or none), and options to capitalize words and add a number
 - **Entropy in bits** for both passwords and passphrases, which drives the strength meter
 - **Recent list**: the last 5 results from this session with copy buttons and a Clear button (kept in memory only, never saved)
+- **Installable & offline**: install it to your home screen or desktop with the **Install app** button; it keeps working without a connection
+- **Light / dark theme**: follows your system by default; the toggle in the top bar remembers your choice
 
 ## 🛠 Tech Stack
 
-React 18 · Vite · Tailwind CSS
+React 18 · Vite · Tailwind CSS · vite-plugin-pwa (Workbox)
 
 ## ▶️ Run locally
 
@@ -28,6 +30,21 @@ cd passwordgenerator
 npm install
 npm run dev        # http://localhost:5173
 ```
+
+## 📲 Install & offline (PWA)
+
+`vite-plugin-pwa` generates `manifest.webmanifest` and a Workbox service worker (`sw.js`) at build time.
+The service worker precaches the built app so it opens offline, and updates itself automatically when a
+new version is deployed. The **Install app** button only appears when the browser offers installation
+(the `beforeinstallprompt` event). Icons (`public/pwa-*.png`, maskable and Apple touch icons) are rendered
+from the app's SVG logo. `vercel.json` serves `sw.js`, `registerSW.js` and the manifest with
+`Cache-Control: no-cache` so updates are picked up promptly.
+
+## 🌗 Theme
+
+The app follows `prefers-color-scheme` until you pick a theme with the toggle (`src/shell/`); the choice is
+saved in `localStorage` (`color-theme`) and applied before first paint. Dark-mode colours are CSS variables in
+`src/theme.css`, wired into Tailwind by `tailwind.theme.js`, so the light design keeps Tailwind's stock colours.
 
 ## 🚀 Deployment
 

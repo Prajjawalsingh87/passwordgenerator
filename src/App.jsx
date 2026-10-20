@@ -250,7 +250,7 @@ function App() {
             </div>
             <p className="mt-2 text-xs text-slate-600">
               Entropy: <strong className="font-semibold tabular-nums text-slate-900">{Math.round(bits)} bits</strong>
-              <span className="text-slate-500">
+              <span className="text-slate-600">
                 {" · "}
                 {isPassphrase
                   ? `${words} words from a list of ${WORD_COUNT}${addNumber ? " + a number" : ""}`
